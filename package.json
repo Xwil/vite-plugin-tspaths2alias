@@ -1,0 +1,35 @@
+{
+  "name": "vite-plugin-tspaths2alias",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "tsconfig",
+    "vite",
+    "alias"
+  ],
+  "author": "yankit",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build:file": "tsup src/index.ts --dts --format cjs,esm",
+    "build": "pnpm clean&pnpm build:file"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "rimraf": "^3.0.2",
+    "tsup": "^5.12.1",
+    "typescript": "^4.6.3",
+    "vite": "^2.8.0"
+  }
+}
