@@ -24,7 +24,6 @@ export default function tspaths2alias():Plugin {
     name: 'tspahts2alias',
     async config() {
       const parse_res = await parse()
-      console.log('log:>>', parse_res)
       return {
         resolve: {
           alias: parse_res
