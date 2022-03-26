@@ -5,7 +5,7 @@ import type { Paths } from './type'
 const clear_reg = /\/\*/
 
 async function parse(configPath:string) {
-  console.log(import.meta.url)
+
   const cwd = process.cwd()
   const tsconfig_path = resolve(cwd, configPath)
   const import_res = await import(tsconfig_path)
