@@ -23,7 +23,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "build:file": "tsup src/index.ts --dts --format cjs,esm",
-    "build": "pnpm clean&pnpm build:file"
+    "build": "pnpm clean & pnpm build:file"
   },
   "license": "MIT",
   "devDependencies": {
